@@ -22,7 +22,8 @@ class NoteViewModel(application: Application) : AndroidViewModel(application = a
     }
 
     fun insert(note: Note) {
-        viewModelScope.launch {
+
+        viewModelScope.launch {     // coroutine
             repository.insert(note)
         }
     }
